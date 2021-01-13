@@ -8,9 +8,10 @@ void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(int arr[ROWS][COLS], const int m, const int n);
 
-void Print(int arr[], const int n);
-void Print(double arr[], const int n);
-void Print(int arr[ROWS][COLS], const int m, const int n);
+template <typename T>
+void Print(T arr[], const int n);
+template <typename T>
+void Print(T arr[ROWS][COLS], const int m, const int n);
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
@@ -96,7 +97,8 @@ void FillRand(int arr[ROWS][COLS], const int m, const int n)
 	}
 }
 
-void Print(int arr[], const int n)
+template <typename T>
+void Print(T arr[], const int n)
 {
 	//Вывод массива на экран:
 	for (int i = 0; i < n; i++)
@@ -105,16 +107,9 @@ void Print(int arr[], const int n)
 	}
 	cout << endl;
 }
-void Print(double arr[], const int n)
-{
-	//Вывод массива на экран:
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << "\t";
-	}
-	cout << endl;
-}
-void Print(int arr[ROWS][COLS], const int m, const int n)
+
+template <typename T>
+void Print(T arr[ROWS][COLS], const int m, const int n)
 {
 	for (int i = 0; i < m; i++)
 	{
