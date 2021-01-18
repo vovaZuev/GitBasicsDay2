@@ -34,7 +34,7 @@ void Sort(T arr[], const int n)
 		{
 			if (arr[j] < arr[i])
 			{
-				double buffer = arr[i];
+				T buffer = arr[i];
 				arr[i] = arr[j];
 				arr[j] = buffer;
 			}
@@ -72,7 +72,7 @@ void Sort(T arr[ROWS][COLS], const int m, const int n)
 #endif // DEBUG
 					if (/*ÏÅÐÅÁÈÐÀÅÌÛÉ ÝËÅÌÅÍ*/arr[k][l] < arr[i][j]/*ÂÛÁÐÀÍÍÛÉ ÝËÅÌÅÍ*/)
 					{
-						int buffer = arr[i][j];
+						T buffer = arr[i][j];
 						arr[i][j] = arr[k][l];
 						arr[k][l] = buffer;
 #ifdef DEBUG
